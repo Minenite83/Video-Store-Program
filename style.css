@@ -1,0 +1,363 @@
+/*entire web page*/
+body{
+  /*light blue background*/
+  background-color:#e0ffff;
+  /*text is centered horizontally*/
+  text-align:center;
+}
+/*all pages*/
+section{
+  /*fill the entire window*/
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  /*hidden*/
+  display:none;
+}
+/*exit program page*/
+#exit-prgm{
+  /*black background*/
+  background-color:black;
+  /*link inside is centered*/
+  justify-content:center;
+  align-items:center;
+}
+/*shows the page that is currently selected*/
+.show{display:block;}
+/*if the page currently selected is the exit program page show it as a flexible element*/
+#exit-prgm.show{display:flex;}
+/*all titles*/
+h1{
+  /*20 pixels of spacing above and 10 pixels of spacing below*/
+  margin:20px 0 10px 0;
+  /*red*/
+  color:red;
+  /*font size is 3 times normal font size*/
+  font-size:3em;
+}
+/*all labels for inputs, links, and table displays*/
+label,a,td{
+  /*font family is Arial or default sans-serif font on computer*/
+  font-family:Arial,sans-serif;
+}
+/*all labels for inputs*/
+label{
+  /*placed on a separate line*/
+  display:block;
+  /*line height is 1.5 times font height*/
+  line-height:1.5em;
+  /*0.7 times font height of spacing below*/
+  margin-bottom:0.7em;
+}
+/*all tables*/
+table{
+  /*centered horizontally*/
+  margin:0 auto;
+  /*no spacing between borders*/
+  border-collapse:collapse;
+  /*width is overflow div width*/
+  width:100%;
+}
+/*all tables that are the direct children of webpages*/
+section > table{
+  /*width is 96% of window width*/
+  width:96%;
+  /*1 pixel thick black border*/
+  border:1px solid black;
+}
+/*all table headers and table displays*/
+th,td{
+  /*1 pixel thick black border*/
+  border:1px solid black;
+}
+/*all first table headers and first table displays*/
+th:first-child,td:first-child{
+  /*no left border*/
+  border-left:none;
+}
+/*all last table headers and last table displays*/
+th:last-child,td:last-child{
+  /*no right border*/
+  border-right:none;
+}
+/*all table headers*/
+th{
+  /*no top border*/
+  border-top:none;
+  /*9 pixels of padding all around*/
+  padding:9px;
+}
+/*all table displays in the last row*/
+tr:last-child td{
+  /*no bottom border*/
+  border-bottom:none;
+}
+/*all table displays*/
+td{
+  /*2 pixels of padding up and down and 5 pixels of padding left and right*/
+  padding:2px 5px;
+  /*font size is 0.8 times normal font size*/
+  font-size:0.8em;
+}
+/*all table header rows*/
+thead{
+  /*gray background*/
+  background-color:gray;
+}
+/*all split screens*/
+.split-screen{
+  /*10 pixels of padding left and right and 30 pixels of padding on the bottom*/
+  padding:0 10px;
+  padding-bottom:30px;
+  /*height is window height*/
+  height:100%;
+}
+/*all left floats*/
+.left-float{
+  /*10 pixels of spacing left and right*/
+  margin:0 10px;
+  /*float to the left*/
+  float:left;
+}
+/*all right floats*/
+.right-float{
+  /*height is split screen's height*/
+  height:100%;
+}
+/*all overflow divs*/
+.overflow{
+  /*height is right float's height*/
+  height:100%;
+  /*if needed adds a scroll bar for overflowing content*/
+  overflow:auto;
+  /*2 pixel thick blue border*/
+  border:2px solid blue;
+}
+/*all buttons*/
+button{
+  /*no border*/
+  border:none;
+  /*font size is normal font size*/
+  font-size:1em;
+  /*2 pixel round corners*/
+  border-radius:2px;
+}
+/*all buttons and links*/
+button,a{
+  /*turns the cursor into the pointer*/
+  cursor:pointer;
+}
+/*all submit buttons*/
+button[type=submit]{
+  /*light blue background*/
+  background-color:#008cff;
+  /*centered horizontally and 15 pixels of spacing above and below*/
+  display:block;
+  margin:15px auto;
+}
+/*when any submit button is activated*/
+button[type=submit]:active{
+  /*blue background*/
+  background-color:#006fc9;
+}
+/*all inputs and autofilled inputs*/
+input,input:autofill{
+  /*white background*/
+  box-shadow:0 0 0 1em white inset;
+  /*1 pixel thick grey border*/
+  border:1px solid grey;
+  /*2 pixel round corners*/
+  border-radius:2px;
+  /*width is 12 times font width*/
+  width:12em;
+  /*centered horizontally,*/
+  text-align:center;
+}
+/*all disabled inputs*/
+input:disabled{
+  /*light grey background*/
+  box-shadow:0 0 0 1em #f0f0f0 inset;
+}
+/*all images*/
+img{
+  /*placed on a separate line*/
+  display:block;
+  /*horizontally centered*/
+  margin:0 auto;
+  /*width is 200 pixels*/
+  width:200px;
+  /*2 pixel thick black border*/
+  border:2px solid black;
+}
+/*all images with no source*/
+img[src=""]{
+  /*height is 100 pixels*/
+  height:100px;
+  /*white background*/
+  background-color:white;
+}
+/*all images in the edit video form*/
+form[name=vid-edit-form] img{
+  /*width is 140 pixels*/
+  width:140px;
+}
+/*all images in the edit video form with no source*/
+form[name=vid-edit-form] img[src=""]{
+  /*height is 75 pixels*/
+  height:75px;
+}
+/*all images inside tables*/
+table img{
+  /*width is 125 pixels*/
+  width:125px;
+}
+/*all inputs inside edit forms*/
+form[name*=edit] input{
+  /*width is 8 times text width*/
+  width:8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*all id inputs*/
+input[name=id]{
+  /*width is 4 times text width*/
+  width:3em !important;
+}
+/*all labels for id input in edit forms*/
+form[name*edit] label:first-child{
+  display:inline;
+}
+/*all id select buttons*/
+.id-sel-btn{
+  background-color:rgb(255,0,0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*all image inputs*/
+input[type=file]{
+  /*hidden but interactable*/
+  display:block;
+  margin:0 auto;
+  margin-top:-2em;
+  opacity:0;
+}
+/*all labels for image inputs*/
+label[for*=img]{
+  /*width is 15 times text size*/
+  width:15em;
+  /*cuts off and adds ... to text if it exceeds the width*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*allows spacing to still work normally*/
+  line-height:1.5em;
+  margin:0.2em auto 0.4em;
+}
+/*all labels for image inputs in edit forms*/
+form[name*=edit] label[for*=img]{
+  /*width is 9 times text size*/
+  width:9em;
+}
+/*all displays for file name near a focused image input*/
+form:has(input[type=file]:focus) span{
+  /*3 pixel rounded border*/
+  border-radius:3px;
+  /*2 pixel thick black outline*/
+  outline:2px solid black;
+}
+/*labels for id inputs inside delete forms*/
+form[name*=del] label{
+  /*100 pixels of spacing above*/
+  margin-top:100px;
+}
+/*all spacer divs*/
+.spacer{
+  /*invisible*/
+  visibility:hidden;
+}
+.spacer::after{
+  /*content is _*/
+  content:"_";
+}
+/*all buttons in the main menu*/
+#main-menu button{
+  /*light yellow-orange background*/
+  background-color:#ffdc00;
+  /*5 pixel curved corners*/
+  border-radius:5px;
+  /*width is 100% of the div's width*/
+  width:100%;
+  /*0.5 times normal font size of padding on all sides*/
+  padding:0.5em;
+  /*5 pixels of spacing all around*/
+  margin:5px;
+}
+/*when any button in the main menu is activated*/
+#main-menu button:active{
+  /*slightly dark yellow-orange background*/
+  background-color:#ebc800;
+}
+/*div for the buttons in the main menu*/
+#main-menu div{
+  /*centered horizontally on page*/
+  margin:0 auto;
+  /*width is 80% of webpage width*/
+  width:80%;
+}
+/*restart link*/
+#restart-link{
+  /*light blue*/
+  color:#00b4ff;
+  /*font size is 3 times normal font size*/
+  font-size:3em;
+}
+/*when the restart link is activated*/
+#restart-link:active{
+  /*slightly dark blue*/
+  color:#0081b8;
+}
+/*buttons in list pages*/
+section[id|=list] button{
+  /*light blue background*/
+  background-color:#008cff;
+  /*50% visible*/
+  opacity:0.5;
+  /*stays in the same place always*/
+  position:fixed;
+  /*15 pixels from the top and 20 pixels from the right*/
+  top:15px;
+  right:20px;
+}
+/*when any button in list pages is hovered over or focused on*/
+section[id|=list] button:hover,section[id|=list] button:focus{
+  /*80% visible*/
+  opacity:0.8;
+}
+/*when any button in list pages is activated*/
+section[id|=list] button:active{
+  /*blue background*/
+  background-color:#0078eb;
+  /*85% visible*/
+  opacity:0.85;
+}

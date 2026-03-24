@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--
+Instructions used to create this program :
+https://docs.google.com/document/d/1pzisMX5HnhRLqb_NlMvtwSk0sPnhADyGE--3QsFqVp4/edit?usp=sharing
+-->
+<html lang="en">
+  <!-- stuff hidden from view -->
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- website title "Video Store Program" -->
+    <title>Video Store Program</title>
+  </head>
+  <!-- stuff shown on screen -->
+  <body>
+    <!-- main menu -->
+    <section class="show" id="main-menu">
+      <!-- title text that says "Main Menu" -->
+      <h1>Main Menu</h1>
+      <!-- buttons that link to each page -->
+      <div>
+        <!-- Exit Program Button -->
+        <button type="button" class="pbtn exit-prgm-btn">Exit Program</button>
+        <!-- Add Customer Button -->
+        <button type="button" class="pbtn add-cus-btn">Add a Customer</button>
+        <!-- Edit Customer Button -->
+        <button type="button" class="pbtn edit-cus-btn" disabled>Edit a Customer</button>
+        <!-- List Customers Button -->
+        <button type="button" class="pbtn list-cus-btn">List all Customers</button>
+        <!-- Delete Customer Button -->
+        <button type="button" class="pbtn del-cus-btn">Delete a Customer</button>
+        <!-- Add Video Button -->
+        <button type="button" class="pbtn add-vid-btn">Add a Video</button>
+        <!-- Edit Video Button -->
+        <button type="button" class="pbtn edit-vid-btn" disabled>Edit a Video</button>
+        <!-- List Videos Button -->
+        <button type="button" class="pbtn list-vid-btn">List all Videos</button>
+        <!-- Delete Video Button -->
+        <button type="button" class="pbtn del-vid-btn">Delete a Video</button>
+      </div>
+    </section>
+    <!-- exit program page -->
+    <section id="exit-prgm">
+      <!-- restart link -->
+      <a id="restart-link" class="pbtn main-menu-btn">Restart</a>
+    </section>
+    <!-- add customer page -->
+    <section id="add-cus">
+      <!-- title text that says "Add a Customer"-->
+      <h1>Add a Customer</h1>
+      <!-- form to add a customer -->
+      <form name="cus-add-form" autocomplete="on">
+        <!-- first name input -->
+        <label>First Name: <input type="text" name="fname" required autofocus></label>
+        <!-- last name input -->
+        <label>Last Name: <input type="text" name="lname" required></label>
+        <!-- telephone number input -->
+        <label>Telephone Number: <input type="text" name="tel" placeholder="111-111-1111" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required></label>
+        <!-- address input -->
+        <label>Address: <input type="text" name="adrs" required></label>
+        <!-- state input -->
+        <label>State: <input type="text" name="st" placeholder="XX" pattern="[A-Z]{2}" required></label>
+        <!-- zip code input -->
+        <label>Zip Code: <input type="text" name="zc" placeholder="11111 or 111111111" pattern="([0-9]{5})|([0-9]{9})" required></label>
+        <!-- submit button -->
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <!-- edit customer page -->
+    <section id="edit-cus">
+      <!-- title text that says "Edit a Customer" -->
+      <h1>Edit a Customer</h1>
+      <!-- entire split screen -->
+      <div class="split-screen">
+        <!-- form to edit a customer -->
+        <form name="cus-edit-form" class="left-float" autocomplete="on">
+          <!-- selected customer's id -->
+          <label>ID: <input type="number" step="1" min="1" name="id" required autofocus></label>
+          <!-- first name input currently disabled -->
+          <label>First Name:<br><input type="text" name="fname" required disabled></label>
+          <!-- last name input currently disabled -->
+          <label>Last Name:<br><input type="text" name="lname" required disabled></label>
+          <!-- telephone number input currently disabled -->
+          <label>Telephone Number:<br><input type="text" name="tel" placeholder="111-111-1111" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required disabled></label>
+          <!-- address input currently disabled -->
+          <label>Address:<br><input type="text" name="adrs" required disabled></label>
+          <!-- state input currently disabled -->
+          <label>State:<br><input type="text" name="st" placeholder="XX" pattern="[A-Z]{2}" required disabled></label>
+          <!-- zip code input currently disabled -->
+          <label>Zip Code:<br><input type="text" name="zc" placeholder="11111 or 111111111" pattern="([0-9]{5})|([0-9]{9})" required disabled></label>
+          <!-- submit button -->
+          <button type="submit">Submit</button>
+        </form>
+        <!-- right float div -->
+        <div class="right-float">
+          <!-- overflow div -->
+          <div class="overflow">
+            <!-- info for all customers that is put in by javascript -->
+            <table class="cus-list"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- list customers page -->
+    <section id="list-cus">
+      <!-- title text that says "Customer List" -->
+      <h1>Customer List</h1>
+      <!-- info for all customers that is put in by javascript -->
+      <table class="cus-list"></table>
+      <!-- spacer div -->
+      <div class="spacer"></div>
+      <!-- return to main menu button -->
+      <button type="button" class="pbtn main-menu-btn">Return to Main Menu</button>
+    </section>
+    <!-- delete customer page -->
+    <section id="del-cus">
+      <!-- title text that says "Delete a Customer" -->
+      <h1>Delete a Customer</h1>
+      <!-- entire split screen -->
+      <div class="split-screen">
+        <!-- form to delete a customer -->
+        <form name="cus-del-form" class="left-float" autocomplete="on">
+          
+          
+          
+          
+          
+          
+          
+          
+          <!-- selected customer's id -->
+          <label>ID: <input type="text" name="id" pattern="\d+" required autofocus></label>
+          <!-- id select button -->
+          <button type="button" class="id-sel-btn">Select</button>
+          <!-- submit button -->
+          <button type="submit">Submit</button>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </form>
+        <!-- right float div -->
+        <div class="right-float">
+          <!-- overflow div -->
+          <div class="overflow">
+            <!-- info for all customers that is put in by javascript -->
+            <table class="cus-list"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- add video page -->
+    <section id="add-vid">
+      <!-- title text that says "Add a Video"-->
+      <h1>Add a Video</h1>
+      <!-- form to add a video -->
+      <form name="vid-add-form" autocomplete="on">
+        <!-- title input -->
+        <label>Title: <input type="text" name="til" required autofocus></label>
+        <!-- genre input -->
+        <label>Genre: <input type="text" name="gnr" required></label>
+        <!-- cost input -->
+        <label>Cost: <input type="number" name="cost" min="0.01" step="0.01" required></label>
+        <!-- quantity input -->
+        <label>Quantity: <input type="number" min="0" step="1" name="qnty" required></label>
+        <!-- label for the image input with display for file name -->
+        <label for="add-img">Image File: <span>none</span></label>
+        <!-- hidden but interactable image input -->
+        <input id="add-img" type="file" name="img" placeholder="" accept="\*image" required>
+        <!-- image to display the file -->
+        <img src="">
+        <!-- submit button -->
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <!-- edit video page -->
+    <section id="edit-vid">
+      <!-- title text that says "Edit a Video" -->
+      <h1>Edit a Video</h1>
+      <!-- entire split screen -->
+      <div class="split-screen">
+        <!-- form to edit a video -->
+        <form name="vid-edit-form" class="left-float" autocomplete="on">
+          <!-- selected video's id -->
+          <label>ID: <input type="number" step="1" min="1" name="id" required autofocus></label>
+          <!-- title input currently disabled -->
+          <label>Title:<br><input type="text" name="til" required disabled></label>
+          <!-- genre input currently disabled -->
+          <label>Genre:<br><input type="text" name="gnr" required disabled></label>
+          <!-- cost input currently disabled -->
+          <label>Cost:<br><input type="number" name="cost" min="0.01" step="0.01" required disabled></label>
+          <!-- quantity input currently disabled -->
+          <label>Quantity:<br><input type="number" min="0" step="1" name="qnty" required disabled></label>
+          <!-- label for the image input with display for file name -->
+          <label for="edit-img">Image File: <span>none</span></label>
+          <!-- hidden but interactable image input currently disabled -->
+          <input id="edit-img" type="file" name="img" placeholder="" accept="\*image" disabled>
+          <!-- image to display the file -->
+          <img src="">
+          <!-- submit button -->
+          <button type="submit">Submit</button>
+        </form>
+        <!-- right float div -->
+        <div class="right-float">
+          <!-- overflow div -->
+          <div class="overflow">
+            <!-- info for all videos that is put in by javascript -->
+            <table class="vid-list"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- list videos page -->
+    <section id="list-vid">
+      <!-- title text that says "Video List" -->
+      <h1>Video List</h1>
+      <!-- info for all videos that is put in by javascript -->
+      <table class="vid-list"></table>
+      <!-- spacer div -->
+      <div class="spacer"></div>
+      <!-- return to main menu button -->
+      <button type="button" class="pbtn main-menu-btn">Return to Main Menu</button>
+    </section>
+    <!-- delete video page -->
+    <section id="del-vid">
+      <!-- title text that says "Delete a Video" -->
+      <h1>Delete a Video</h1>
+      <!-- entire split screen -->
+      <div class="split-screen">
+        <!-- form to delete a video -->
+        <form name="vid-del-form" class="left-float" autocomplete="on">
+          <!-- selected video's id -->
+          <label>ID: <input type="number" step="1" min="1" name="id" required autofocus></label>
+          <!-- submit button -->
+          <button type="submit">Submit</button>
+        </form>
+        <!-- right float div -->
+        <div class="right-float">
+          <!-- overflow div -->
+          <div class="overflow">
+            <!-- info for all videos that is put in by javascript -->
+            <table class="vid-list"></table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
